@@ -1,41 +1,92 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 0.1px);
+  font-size: 14px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.container {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  width: 400px;
+}
+
+.container > article:first-child img {
+  display: block;
+  margin: auto;
+}
+
+.container h1 {
+  color: var(--very-dark-desaturated-blue);
+  font-size: 2rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.article-question {
+  border-bottom: 0.1rem solid var(--light-grayish-blue);
+  padding: 1rem 0;
+}
+
+.article-question article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.article-question article h2 {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.article-question article h2.clicked {
+  font-weight: 600;
+}
+
+.article-question article p {
+  color: var(--very-dark-grayish-blue);
+}
+
+.icon {
+  color: var(--soft-red);
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 992px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .container > article:first-child {
+    flex: 1;
+    margin-right: 3rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .container > article:nth-child(2) {
+    flex: 2;
+  }
 }
